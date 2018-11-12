@@ -1,0 +1,34 @@
+.boxed-view {
+  align-items: center; // center vertically
+  background: $boxed-view-overlay-bg;
+  display: flex;
+  justify-content: center; // center horizontally
+  height: 100vh; // vh is viewport height. => 100% of the viewport height
+  width: 100vw; // vw is viewport width. => 100% of viewport width
+}
+
+.boxed-view--modal {
+  // use SCSS function to fade-out our background color
+  background: fade-out($color: $boxed-view-overlay-bg, $amount: .3);
+  // specified fixed position relative to viewport (browser), regardless if user
+  // had scroll the content of the page.
+  position: fixed;
+  // stretch to the edges of the viewport regardless of the content
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.boxed-view__box {
+  background: $boxed-view-bg;
+  padding: 2.4rem;
+  text-align: center; // center all things inside box
+  width: 24rem;
+}
+
+.boxed-view__form {
+  display: flex;
+  flex-direction: column; // stack items in column
+}

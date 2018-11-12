@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// base should not contain any styles specified for id / class. only stick to
+// generic selector
+
+html {
+  font-size: 62.5%; // 16 pixels (default fontsize) * 0.625 = 10 pixels
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $base-font-size;
+}
+
+h1 {
+  font-weight: 300;
+  margin-bottom: $space;
+}
+
+h2 {
+  font-size: $large-font-size;
+  margin-bottom: $space;
+}
+
+p {
+  margin-bottom: $space;
+}
+
+a {
+  // overide default to show links black always since our links are action
+  // items that doesn't need to show different colors for default visited
+  // or not-visited colors
+  color: black;
+}
+
+// this is to exclude other input types like checkboxes, radios and etc.
+input[type=text], input[type=email], input[type=password] {
+  border: 1px solid $input-border;
+  font-size: $base-font-size; // this needed as the global font-size doesn't apply to input
+  margin-bottom: $space;
+  padding: $input-spacing;
+}

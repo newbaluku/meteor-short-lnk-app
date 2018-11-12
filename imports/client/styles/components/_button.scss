@@ -1,0 +1,46 @@
+.button {
+  background: $button-bg;
+  border: none;
+  color: $button-color;
+  cursor: pointer;
+  font-size: $base-font-size;
+  // set uniform line height for all buttons, this will fix the
+  // differing button heights in <a> and <button> tags when they arranged
+  // in a row (ie. in links page -- button--pill)
+  line-height: 1.2;
+  margin-bottom: $space;
+  padding: $input-spacing;
+  text-transform: uppercase;
+}
+
+// button modifier -- links trying to dinguish as buttons
+.button--link {
+  // change <a> tag from inline -> inline-block so that the margins and padding
+  // we declare above take effects when we apply both of these styles to an
+  // <a> tag
+  display: inline-block;
+  // remove the underline in an <a> tag by default
+  text-decoration: none;
+}
+
+.button--pill {
+  background-color: transparent;
+  border: 1px solid $button-pill-color;
+  color: $button-pill-color;
+  margin: 0 ($space/2) 0 0;
+  padding: .3rem .8rem;
+}
+
+.button--secondary {
+  background: $button-secondary-bg;
+  border: 1px solid $button-secondary-border-color;
+  color: $button-secondary-color;
+}
+
+.button--link-text {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-transform: none;
+}
